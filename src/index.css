@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Inter:wght@300;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-menu .ant-menu-item {
+  color: rgb(255, 255, 255) !important;
+  
+}
+
+.custom-menu .ant-menu-item-selected {
+  background-color: #000000 !important;
+  color: white !important;
+}
+
+.description-label {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .descriptions-item {
+    font-weight: normal;
+    color: white; /* Ensures that the value text is white */
+  }
+
+  :where(.css-dev-only-do-not-override-1c0na6j).ant-tabs .ant-tabs-tab-btn{
+    color: white !important;
+  }
+  
+  
+  
