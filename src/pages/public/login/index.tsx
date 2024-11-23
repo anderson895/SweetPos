@@ -74,7 +74,7 @@ export const LoginPage = () => {
       {/* Login Form with Wave Effect on Left */}
       <div className="relative w-full md:w-[60%] h-screen p-10 flex overflow-hidden">
         <div className='absolute top-8 left-36 text-left'>
-            <p className='font-grand-hotel text-4xl md:text-8xl text-white line-clamp-1'>J’ Sweet Fix</p>
+            <p className='font-grand-hotel text-4xl md:text-8xl text-white line-clamp-1'>D’ Sweet Fix</p>
             <p className='text-white text-lg md:text-xl pl-8'>BAKING & CONFECTIONERY SHOP</p>
         </div>
         <div className="absolute bottom-12 left-2 md:left-36 w-full md:w-[60%] h-[65%] mx-auto p-8">
