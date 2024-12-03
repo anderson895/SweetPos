@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UserOutlined
 } from '@ant-design/icons';
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { MdOutlineInventory,MdPointOfSale } from "react-icons/md";
@@ -43,7 +42,7 @@ export default function StaffSide() {
         if (key === 'logout') {
           handleLogout();
         } else if (key === 'settings') {
-          setIsModalVisible(true); // Show the modal when "Settings" is clicked
+          setIsModalVisible(true); 
         }
       }}
       items={[
@@ -64,8 +63,14 @@ export default function StaffSide() {
         collapsed={collapsed}
       >
         <div className='p-4'>
-          <p className='font-grand-hotel text-4xl text-white'>D’ Sweet Fix</p>
-          <p className='text-white text-lg'>BAKING & CONFECTIONERY SHOP</p>
+        {!collapsed ? (
+      <>
+        <p className='font-grand-hotel text-4xl text-white'>D’ Sweet Fix</p>
+        <p className='text-white text-lg'>BAKING & CONFECTIONERY SHOP</p>
+      </>
+    ) : (
+      <p className='font-grand-hotel text-2xl text-white'>D’SF</p>
+    )}
         </div>
         <Menu
           theme="dark"
@@ -130,7 +135,7 @@ export default function StaffSide() {
             trigger="click"
             placement="bottomRight"
           >
-           <Avatar icon={<UserOutlined />} style={{ cursor: 'pointer',backgroundColor: '#87d068' }} />
+           <Avatar src={user?.info?.profilePicture} style={{ cursor: 'pointer',backgroundColor: '#87d068' }} />
           </Popover>
         </Header>
         <Content

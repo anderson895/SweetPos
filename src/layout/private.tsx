@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import {
   MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UserOutlined 
+  MenuUnfoldOutlined
 } from '@ant-design/icons';
 import { BsList } from "react-icons/bs";
 import { TiGroupOutline } from "react-icons/ti";
@@ -20,6 +19,7 @@ const { Header, Sider, Content } = Layout;
 
 export default function Private() {
   const user = useStore(selector('admin'))
+  console.log(user.info)
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false); 
@@ -153,7 +153,7 @@ export default function Private() {
             trigger="click"
             placement="bottomRight"
           >
-            <Avatar icon={<UserOutlined />} style={{ cursor: 'pointer',backgroundColor: '#87d068' }} />
+            <Avatar src={user?.info?.profilePicture} style={{ cursor: 'pointer',backgroundColor: '#87d068' }} />
           </Popover>
         </Header>
         <Content
