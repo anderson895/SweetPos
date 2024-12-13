@@ -13,4 +13,5 @@ export const RouterUrl = {
     Sales:'/Dashboard/Staff/Sales',
     AdminSales:'/Dashboard/Sales',
     Reports:'/Dashboard/Reports',
+    Income:'/Dashboard/Income_Summary'
 }

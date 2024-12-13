@@ -20,14 +20,12 @@ export const LoginPage = () => {
           const usersRef = collection(db, 'users');
           const q = query(usersRef, where('username', '==', Username));
           const querySnapshot = await getDocs(q);
-    
+            console.log(q)
           if (querySnapshot.empty) {
             message.error('User not found!');
             setLoading(false)
             return;
           }
-    
-          // Assume usernames are unique, so get the first document
           const userDoc = querySnapshot.docs[0];
 
           const userData = {
@@ -36,7 +34,6 @@ export const LoginPage = () => {
             id: userDoc.id, // Include the document ID
           };
           console.log(userData)
-          // Check if the retrieved email is valid
           if (!userData.email || !userData.email.includes('@')) {
             throw new Error('Invalid email format');
           }

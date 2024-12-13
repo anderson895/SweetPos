@@ -27,6 +27,7 @@ function App() {
         { path: RouterUrl.InventoryList, element:<InventoryListPage />},
         { path: RouterUrl.AdminSales, element:<AdminSalesPage />},
         { path: RouterUrl.Reports, element:<AdminReportsPage />},
+      
       ]
     },
     {
